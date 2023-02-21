@@ -1,37 +1,111 @@
 body {
-    background-color: rgb(17, 31, 32);
+  height: 100vh;
+  width: 100vw;
+    background-color: rgb(248, 247, 247);
     color: rgb(86, 224, 86);
     font-family: monospace;
+    overflow: hidden;
+  
+}
+.bg {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.bgimage {
+ 
+  position: absolute;
+  max-width: 100%;
+ height: 100%;
+object-fit: cover;
+
 }
 
-#quote {
-    background-color: rgb(16, 35, 40);
-    min-width: 20em;
+#bootscreen {
+  opacity: 0;
+  color: black;
+  width: 100%;
+  position: absolute;
+  margin-top: 10em;
+  padding: 2em;
+  width: 32em;
+  height: 15em;
+  object-fit: cover;
+  text-align: center;
+background-color: rgb(0, 194, 242);
+
+
+}
+#bootscreen.visible {
+opacity:1;
+transition: all 0.5s;
+}
+#bootscreen.off {
+  transition: all 1s;
+background-color: black;
+  }
+.quotescreen {
+width: 100%;
+position: absolute;
+margin-top: 10em;
+padding: 2em;
+width: 32em;
+height: 15em;
+object-fit: cover;
+  background-color: rgb(16, 35, 40);
+  
+  }
+  #fact {
+
+    min-width:20em;
     max-width: 20em;
     min-height: 10em;
     max-height: 10em;
-   padding:1em;
+  }
+h2#fact {
+  filter: drop-shadow(0px 1px 5px rgba(127, 255, 124, 0.348));
 }
-.quotecontent {
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 10em;
-
-}
-.quotescreen {
-padding: 5em;
-}
-#nextquote {
+#nextfact {
+  cursor: pointer;
     font-weight: bold;
-    
     color: white;
-    background-color: crimson;
-    width: 15vw;
-    height: 10vw;
+margin-top: 39em;
+    width: 12em;
+    height: auto;
   position: relative;
   border:none;
+  transition: all 0.05s;
+}
+#nextfact:active {
+  transform: translatey(0.5em) scale(0.9);
+}
+#postit {
+  cursor: pointer;
+  position: fixed;
+top: 40.5%;
+margin-left: 18.5em;
+width: 4em;
+  font-weight: bold;
+  color:black;
+  transform:rotate(-5deg)
+}
+#camerabutton {
+  position: fixed;
+  margin: 5em;
+  height: 5em;
+  width: 10em;
 
+}
+#camerabutton:hover {
+  cursor: pointer;
+}
+#offButton {
 
-    
+  cursor: pointer;
+  position: fixed;
+  top: 80.5%;
+  margin-left: 16em;
+  height: 7em;
+  width: 7em;
+
 }
