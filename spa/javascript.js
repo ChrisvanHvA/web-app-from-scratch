@@ -1,5 +1,8 @@
 // const camera = document.getElementById("camerabutton");
 // document.getElementById("camerabutton").addEventListener("click", face)
+
+
+// import de webcam functie
 import {
   face
 } from "/face.js"
@@ -10,7 +13,7 @@ const factBtn = document.getElementById("nextfact")
 factBtn.addEventListener("click", () => {
   randomFact()
 })
-
+//de function die de face.js activeerd
 const cameraBtn = document.getElementById("camerabutton");
 cameraBtn.addEventListener("click", () => {
   face(quotes)
@@ -35,18 +38,21 @@ function randomFact() {
       console.log(data.fact)
 
       quotes.textContent = data.fact
-    }).catch(function (err) {
+      quotes.classList.add("active");
+      setTimeout(resetanim, 200);
+    }).catch(function (er) {
       // voor foutjes
       console.warn('oepsie woepsie, er is iets stukkie wukkie.', err);
       quotes.innerText = "cat fact missing, try again later";
     });
 }
 
-// //als je de webcam klikt dan verschijnt deze message
-// function face() {
-//   quotes.innerText = ". . . . .╭━━━━━━╮      . .  . . . . . .   " + ". . .╭┃   . .  ╭━━━━╮. . . . . ." + "  . . . .┃┃  . .  ╰━━━━╯. . . .  " + ". . . . . .┃┃ . . . . . ┃ . <-you  . . ." + " . . . .╰┃    . ┃ ─┌     . ┃ . . . . ." + "  . . . . . . .╰━╯  .  ╰━╯"
+function resetanim() {
 
-// }
+  quotes.classList.remove("active");
+  void quotes.offsetWidth;
+}
+
 
 //hier past de post text zich aan.
 function postit() {
