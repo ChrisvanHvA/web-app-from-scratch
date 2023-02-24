@@ -1,58 +1,105 @@
+// const camera = document.getElementById("camerabutton");
+// document.getElementById("camerabutton").addEventListener("click", face)
+import {
+  face
+} from "/face.js"
 
-const camera = document.getElementById("camerabutton");
-document.getElementById("camerabutton").addEventListener("click", face)
 const quotes = document.getElementById("fact");
-document.getElementById("nextfact").addEventListener("click", randomFact)
+
+const factBtn = document.getElementById("nextfact")
+factBtn.addEventListener("click", () => {
+  randomFact()
+})
+
+const cameraBtn = document.getElementById("camerabutton");
+cameraBtn.addEventListener("click", () => {
+  face(quotes)
+})
+
 const postext = document.getElementById("postit");
+postext.addEventListener("click", postit);
+
 document.getElementById("offButton").addEventListener("click", turnOff)
 
-randomFact()
+document.getElementById("lightswitch").addEventListener("click", lightsOff)
+const darkness = document.getElementById("darkness");
+
+
+//dit laad een random feitje uit de api van catfacts
+randomFact();
+
 function randomFact() {
+  fetch('https://catfact.ninja/fact')
+    .then((response) => response.json())
+    .then(function (data) {
+      console.log(data.fact)
 
-fetch('https://catfact.ninja/fact')
-  .then((response) => response.json())
-.then(function (data) {
-    console.log(data.fact)
-          
-    
-            quotes.textContent = data.fact
-        }).catch(function (err) {
-            // voor funny foutjes
-            console.warn('oepsie woepsie, er is iets stukkie wukkie.', err);
-        });
+      quotes.textContent = data.fact
+    }).catch(function (err) {
+      // voor foutjes
+      console.warn('oepsie woepsie, er is iets stukkie wukkie.', err);
+      quotes.innerText = "cat fact missing, try again later";
+    });
 }
 
-function face() {
-  quotes.innerText = ". . . . .╭━━━━━━╮           . . . . . .   "+ ". . . .╭┃   . .  ╭━━━━╮. . . . . ." + "   . . .┃┃  . .  ╰━━━━╯. . . .  " + ". . . . .┃┃ . . . . . ┃ . <-you  . . ." + " . . .╰┃    . ┃ ─┌     . ┃ . . . . ." + "  . . . . . .╰━╯  .  ╰━╯"
+// //als je de webcam klikt dan verschijnt deze message
+// function face() {
+//   quotes.innerText = ". . . . .╭━━━━━━╮      . .  . . . . . .   " + ". . .╭┃   . .  ╭━━━━╮. . . . . ." + "  . . . .┃┃  . .  ╰━━━━╯. . . .  " + ". . . . . .┃┃ . . . . . ┃ . <-you  . . ." + " . . . .╰┃    . ┃ ─┌     . ┃ . . . . ." + "  . . . . . . .╰━╯  .  ╰━╯"
 
-}
-postext.addEventListener("click", postit);
+// }
+
+//hier past de post text zich aan.
 function postit() {
-postext.textContent = "don't touch me"
-setTimeout(postReset, 2500)
+  postext.textContent = "don't touch me"
+  setTimeout(postReset, 2500)
 }
 
 function postReset() {
   postext.textContent = "task: hate humans"
 }
+
+//bij deze function komt er een scherm voor de echte scherm om de illusie te geven dat ie uit staat
 function turnOff() {
   const bootscreen = document.getElementById("bootscreen");
-bootscreen.classList.toggle("visible");
-setTimeout(offMode, 1500)
+  bootscreen.classList.toggle("visible");
+  setTimeout(offMode, 1500)
 }
+
 function offMode() {
   bootscreen.classList.toggle("off");
 }
+
+//doet de lichten uit door een donker vlak voor te plaatsen, the if/else past de achtergrond aan
+function lightsOff() {
+  darkness.classList.toggle("active");
+  if (darkness.classList.contains('active')) {
+
+    document.getElementById("bgimage").src = "pcdarkness.png";
+  } else {
+    document.getElementById("bgimage").src = "pc.png";
+  }
+
+}
+
+
+
+
+
+
+
+
+
 // VVVV code die niet werkte of kapot ging VVVV
 
 
+
 // fetch('https://quotes.fdnd.nl/api/v1/quotes', {
-    
+
 // 	method: "GET",
 //  mode:"no-cors"
 // })
 // .then(res => {
-    
+
 
 //     console.log(res)
 // return res.json();
@@ -61,8 +108,6 @@ function offMode() {
 // 		console.log(err);
 // });
 
-
-
 // document.getElementById("nextquote").addEventListener("click", randomQuote)
 // const quotes = document.getElementById("quote");
 // const credit = document.getElementById("creds");
@@ -70,9 +115,7 @@ function offMode() {
 
 // //onload maken?
 // randomQuote()
-
 // function randomQuote() {
-    
 //     fetch('https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=English_Womens_Super_League').then(function (response) {
 //         // The API call was successful!
 //         console.log(response)
@@ -82,11 +125,8 @@ function offMode() {
 //         // quotepicker = Math.floor(Math.random() * 16);
 //         // quotes.textContent = data.data[quotepicker].text
 //         // credit.textContent = data.data[quotepicker].name
-
-
 //     }).catch(function (err) {
 //         // There was an error
 //         console.warn('Something went wrong.', err);
 //     });
-
 // }
