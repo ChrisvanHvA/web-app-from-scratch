@@ -80,9 +80,9 @@ function lightsOff() {
   darkness.classList.toggle("active");
   if (darkness.classList.contains('active')) {
 
-    document.getElementById("bgimage").src = "pcdarkness.png";
+    document.getElementById("bgimage").src = "/images/pcdarkness.png";
   } else {
-    document.getElementById("bgimage").src = "pc.png";
+    document.getElementById("bgimage").src = "/images/pc.png";
   }
 
 }
