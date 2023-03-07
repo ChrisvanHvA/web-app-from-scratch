@@ -11,7 +11,23 @@ body {
   color: rgb(86, 224, 86);
   font-family: monospace;
   overflow: hidden;
+}
 
+.routerbuttons {
+  position: sticky;
+  z-index: 5;
+  width: 12em;
+  height: 0em;
+  top: 48em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.routerbuttons > a {
+  width: 6em;
+  height: 5em;
 }
 
 H2 {
@@ -30,7 +46,6 @@ H2 {
   max-width: 100%;
   height: 100%;
   object-fit: cover;
-
 }
 
 #bootscreen {
@@ -116,6 +131,22 @@ H2 {
   transform: translatey(0.5em) scale(0.9);
 }
 
+#nextjoke {
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  margin-top: 39em;
+  width: 12em;
+  height: auto;
+  position: relative;
+  border: none;
+  transition: all 0.05s;
+}
+
+#nextjoke:active {
+  transform: translatey(0.5em) scale(0.9);
+}
+
 #postit {
   cursor: pointer;
   position: fixed;
@@ -173,3 +204,4 @@ H2 {
 #darkness.active {
   opacity: 1;
 }
+
