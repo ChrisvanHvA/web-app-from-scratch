@@ -1,17 +1,17 @@
 import {
   randomFact
-} from "/js/facts.js"
+} from "./js/facts.js"
 
 import {
   randomJoke
-} from "/js/jokes.js"
+} from "./js/jokes.js"
 
 import {
   face,
   turnOff,
   lightsOff,
   postit
-} from "/js/interactions.js"
+} from "./js/interactions.js"
 
 
 async function facts() {
