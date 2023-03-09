@@ -1,6 +1,6 @@
 import {
   randomFact
-} from "/facts.js"
+} from "./facts.js"
 
 import {
   randomJoke
