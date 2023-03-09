@@ -7,7 +7,7 @@ const postext = document.getElementById("postit");
 function face(quotes) {
     quotes.innerText = ". . . . .╭━━━━━━╮      . .  . . . . . .   " + ". . .╭┃   . .  ╭━━━━╮. . . . . ." + "  . . . .┃┃  . .  ╰━━━━╯. . . .  " + ". . . . . .┃┃ . . . . . ┃ . <-you  . . ." + " . . . .╰┃    . ┃ ─┌     . ┃ . . . . ." + "  . . . . . . .╰━╯  .  ╰━╯"
   
-    console.log("hiii")
+
 }
 //doet de beeldscherm uit
 function turnOff() {
@@ -25,9 +25,9 @@ function turnOff() {
     darkness.classList.toggle("active");
     if (darkness.classList.contains('active')) {
   
-      document.getElementById("bgimage").src = "images/pcdarkness.png";
+      document.getElementById("bgimage").src = "./images/pcdarkness.png";
     } else {
-      document.getElementById("bgimage").src = "images/pc.png";
+      document.getElementById("bgimage").src = "./images/pc.png";
     }
 }
 
