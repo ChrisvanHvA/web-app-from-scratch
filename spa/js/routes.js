@@ -11,7 +11,7 @@ import {
   turnOff,
   lightsOff,
   postit
-} from "./interactions.js"
+} from "..js/interactions.js"
 
 
 async function facts() {
