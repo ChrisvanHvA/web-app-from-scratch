@@ -23,6 +23,7 @@ specifieks.
 # Week 1 - Kennismakings visite kaartjes
 
 In de eerste week moesten we gaan werken aan een visitekaartje die helpt om jezelf te introduceren aan je medestudenten. de bedoeling was dat je informatie uit een api ging ophalen en dat verwerkte in het visitekaartje, helaas was mij dat niet zo goed gelukt in de tijdsperiode die we hadden dus was mijn focus meer gezet op CSS design.
+![kaart schetjes](https://user-images.githubusercontent.com/90341211/224329642-b73504d5-84eb-40a2-8630-9c2878f36bc2.png)
 
 check [mijn visitekaartje hier!](https://chrisvanhva.github.io/visitekaartje/)
 
@@ -30,7 +31,7 @@ Na dat we de visitekaartjes hadden gemaakt waren we in groepjes ingedeelte om ee
 
 # Week 2 - Uitleg en eerste versie
 
-##Debriefing - Single page app
+## Debriefing - Single page app
 De opdracht die we hebben gekregen voor dit vak is het maken van een applicatie die bestaat uit 1 pagina, de pagina moet informatie fetchen uit een API en moet aan een aantal criteria voldoen
 - 1 Je moet het baseren op een van de User stories die geleverd wordt.
 - 2 laad informatie uit een API in.
