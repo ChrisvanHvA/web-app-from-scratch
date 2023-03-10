@@ -215,3 +215,20 @@ font-size: 1.3vh;
   opacity: 1;
 }
 
+#favorite {
+  font-family: sans-serif;
+  cursor: pointer;
+  position: fixed;
+  top: 78vh;
+  padding: 1em;
+  margin-left: 40vh;
+background-color: rgb(235, 235, 132);
+border-radius: 0.5em;
+border: 1px solid black;
+  width: 12vh;
+  height: 8vh;
+font-size: 1.3vh;
+  font-weight: bold;
+  color: black;
+
+}

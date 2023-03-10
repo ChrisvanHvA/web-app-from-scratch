@@ -3,7 +3,8 @@ import {
 } from "./facts.js"
 
 import {
-  randomJoke
+  randomJoke,
+  filterJoke
 } from "./jokes.js"
 
 import {
@@ -37,6 +38,7 @@ async function jokes() {
   jokeBtn.addEventListener("click", () => {
     randomJoke()
   })
+  document.getElementById("favorite").addEventListener("click", filterJoke);
   document.getElementById("lightswitch").addEventListener("click", lightsOff)
   document.getElementById("offButton").addEventListener("click", turnOff)
   const postext = document.getElementById("postit");
