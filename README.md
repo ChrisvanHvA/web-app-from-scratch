@@ -22,6 +22,10 @@ specifieks.
 
 # Week 1 - Kennismakings visite kaartjes
 
+In de eerste week moesten we gaan werken aan een visitekaartje die helpt om jezelf te introduceren aan je medestudenten. de bedoeling was dat je informatie uit een api ging ophalen en dat verwerkte in het visitekaartje, helaas was mij dat niet zo goed gelukt in de tijdsperiode die we hadden dus was mijn focus meer gezet op CSS design.
+
+check [mijn visitekaartje hier!](https://chrisvanhva.github.io/visitekaartje/)
+Na dat we de visitekaartjes hadden gemaakt waren we in groepjes ingedeelte om een Squad page te designen waarin alle visitekaartjes gepresenteerd konden worden, na aardig wat brainstorming en een aardige hoeveelheid code met mijn groepje te maken werd deze opdracht helaas een beetje geschrapt, maar het gaf me wel een voorproefje met hoe het zal zijn om tijdens deze minor in groepjes te werken.
 
 # Week 3 - Uitleg en eerste versie
 
