@@ -28,6 +28,7 @@ In de eerste week moesten we gaan werken aan een visitekaartje die helpt om jeze
 check [mijn visitekaartje hier!](https://chrisvanhva.github.io/visitekaartje/)
 
 Na dat we de visitekaartjes hadden gemaakt waren we in groepjes ingedeelte om een Squad page te designen waarin alle visitekaartjes gepresenteerd konden worden, na aardig wat brainstorming en een aardige hoeveelheid code met mijn groepje te maken werd deze opdracht helaas een beetje geschrapt, maar het gaf me wel een voorproefje met hoe het zal zijn om tijdens deze minor in groepjes te werken.
+![image](https://user-images.githubusercontent.com/90341211/224334675-951e6ab0-a2c6-4aaf-98bc-c3b17f53d209.png)
 
 # Week 2 - Uitleg en eerste versie
 
